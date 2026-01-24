@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Bandwagon Transfer Form</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
+        .font-mono { font-family: 'Courier Prime', monospace; }
+        .stamp {
+            transform: rotate(-12deg);
+            mix-blend-mode: multiply;
+            mask-image: url('https://grainy-gradients.vercel.app/noise.svg');
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        const TEAMS = [
+            { name: "Chelsea", rank: 10, color: "blue-600" },
+            { name: "Man Utd", rank: 8, color: "red-600" },
+            { name: "Man City", rank: 2, color: "sky-400" },
+            { name: "Arsenal", rank: 1, color: "red-500" },
+            { name: "Liverpool", rank: 3, color: "red-700" },
+            { name: "Tottenham", rank: 5, color: "slate-800" },
+            { name: "Leverkusen", rank: 1, color: "red-600" },
+            { name: "Real Madrid", rank: 1, color: "yellow-500" },
+        ];
+
+        const REASONS = [
+            "My mental health is suffering",
+            "I like winning trophies",
+            "I just really like their kit",
+            "My favorite player moved there",
+            "I'm tired of being banned from Twitter",
+        ];
+
+        function App() {
+            const [oldTeam, setOldTeam] = useState(TEAMS[0].name);
+            const [newTeam, setNewTeam] = useState(TEAMS[2].name);
+            const [reason, setReason] = useState(REASONS[0]);
+            const [name, setName] = useState("John Doe");
+            const [showForm, setShowForm] = useState(false);
+
+            const handleGenerate = () => {
+                setShowForm(true);
+            };
+
+            return (
+                <div className="max-w-xl mx-auto">
+                    <div className="mb-8 text-center">
+                        <h1 className="text-3xl font-extrabold text-slate-900 mb-2">⚽️ The Transfer Market</h1>
+                        <p className="text-slate-500">Official Bandwagon Application Portal</p>
+                    </div>
+
+                    {!showForm ? (
+                        <div className="bg-white rounded-xl shadow-lg p-6 space-y-6">
+                            <div>
+                                <label className="block text-sm font-medium text-slate-700 mb-1">Applicant Name</label>
+                                <input 
+                                    type="text" 
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                    className="w-full border border-slate-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
+                                />
+                            </div>
+
+                            <div className="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label className="block text-sm font-medium text-slate-700 mb-1">Leaving Team 🤮</label>
+                                    <select 
+                                        value={oldTeam}
+                                        onChange={(e) => setOldTeam(e.target.value)}
+                                        className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white"
+                                    >
+                                        {TEAMS.map(t => <option key={t.name} value={t.name}>{t.name}</option>)}
+                                    </select>
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium text-slate-700 mb-1">Joining Team 🏆</label>
+                                    <select 
+                                        value={newTeam}
+                                        onChange={(e) => setNewTeam(e.target.value)}
+                                        className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white"
+                                    >
+                                        {TEAMS.map(t => <option key={t.name} value={t.name}>{t.name}</option>)}
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label className="block text-sm font-medium text-slate-700 mb-1">Reason for Betrayal</label>
+                                <select 
+                                    value={reason}
+                                    onChange={(e) => setReason(e.target.value)}
+                                    className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white"
+                                >
+                                    {REASONS.map(r => <option key={r} value={r}>{r}</option>)}
+                                </select>
+                            </div>
+
+                            <button 
+                                onClick={handleGenerate}
+                                className="w-full bg-black text-white font-bold py-4 rounded-lg hover:bg-slate-800 transition-colors shadow-lg shadow-black/20"
+                            >
+                                Submit Official Request
+                            </button>
+                        </div>
+                    ) : (
+                        <div className="animate-fade-in relative">
+                            <div className="bg-[#fffdf0] p-8 md:p-10 rounded-sm shadow-2xl border-2 border-slate-900 relative overflow-hidden">
+                                {/* Watermark */}
+                                <div className="absolute inset-0 opacity-[0.03] pointer-events-none flex items-center justify-center">
+                                    <span className="text-9xl font-black rotate-45">SHAME</span>
+                                </div>
+                                
+                                {/* Header */}
+                                <div className="border-b-4 border-black pb-4 mb-6 flex justify-between items-start">
+                                    <div>
+                                        <h2 className="text-3xl font-black uppercase font-mono tracking-tighter">Transfer Request</h2>
+                                        <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mt-1">Form BW-2024 • Department of Plastic Fans</p>
+                                    </div>
+                                    <div className="w-16 h-16 border-4 border-black flex items-center justify-center">
+                                        <span className="text-3xl">🤡</span>
+                                    </div>
+                                </div>
+
+                                {/* Content */}
+                                <div className="font-mono space-y-6 text-sm md:text-base">
+                                    <p>
+                                        I, <span className="font-bold border-b-2 border-black border-dashed px-1">{name}</span>, 
+                                        hereby formally request to terminate my support for 
+                                        <span className="font-bold text-red-600 mx-1">{oldTeam}</span> 
+                                        effective immediately.
+                                    </p>
+
+                                    <p>
+                                        I acknowledge that my former club is "finished" and I can no longer endure the banter.
+                                    </p>
+
+                                    <div className="bg-slate-100 p-4 border border-slate-300 rounded">
+                                        <span className="block text-xs uppercase text-slate-500 mb-1">New Destination</span>
+                                        <span className="text-xl font-black">{newTeam}</span>
+                                    </div>
+
+                                    <div className="bg-slate-100 p-4 border border-slate-300 rounded">
+                                        <span className="block text-xs uppercase text-slate-500 mb-1">Stated Reason</span>
+                                        <span className="italic">"{reason}"</span>
+                                    </div>
+
+                                    <p className="text-xs text-slate-500 mt-4">
+                                        By signing below, I accept the title of "Glory Hunter" and understand I may never return to my original fanbase.
+                                    </p>
+                                </div>
+
+                                {/* Footer / Stamp */}
+                                <div className="mt-12 flex justify-between items-end relative">
+                                    <div className="text-center">
+                                        <div className="h-0.5 w-32 bg-black mb-1"></div>
+                                        <span className="text-xs uppercase font-bold">Applicant Signature</span>
+                                    </div>
+                                    
+                                    <div className="stamp absolute right-0 bottom-0 -mb-4 -mr-4 border-4 border-red-600 p-2 text-red-600 font-black text-xl uppercase tracking-widest opacity-80 rotate-[-15deg]">
+                                        APPROVED
+                                        <div className="text-[10px] text-center leading-none mt-1">NO REFUNDS</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button 
+                                onClick={() => setShowForm(false)}
+                                className="mt-6 w-full text-slate-500 hover:text-slate-900 font-medium"
+                            >
+                                ← Create Another
+                            </button>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
