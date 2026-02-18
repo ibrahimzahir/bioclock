@@ -53,31 +53,38 @@ const AnimalAge = () => {
          <AdBanner slotId="1122334455" />
 
          <section className="prose prose-slate max-w-none bg-white p-8 rounded-2xl shadow-sm border border-gray-100 mt-8">
-            <h2>How to Calculate Dog Years: The Truth</h2>
+            <h2>The Science of Aging: Why Do Animals Clock Time Differently? 🕰️</h2>
             <p>
-                For decades, the standard rule was simple: <strong>1 Human Year = 7 Dog Years</strong>. 
-                However, modern veterinary science suggests this is an oversimplification. 
-                Dogs mature much faster than humans in their first two years.
+                The old "7 year rule" is a myth. Aging is not linear across species. 
+                Biological time is often measured by metabolic rate and heartbeats.
             </p>
-            <h3>The Science Behind Pet Age</h3>
+
+            <h3>The Heartbeat Hypothesis</h3>
             <p>
-                A more accurate calculation involves:
+                There is a fascinating biological theory that most mammals get roughly <strong>1 billion heartbeats</strong> in a lifetime.
+                <ul>
+                    <li><strong>Hamsters:</strong> Their hearts beat 450 times per minute. They live only 2-3 years.</li>
+                    <li><strong>Whales:</strong> Their hearts beat only 20 times per minute. They can live over 100 years.</li>
+                    <li><strong>Humans:</strong> We are outliers! We get about 2.5 billion beats thanks to modern medicine and evolution.</li>
+                </ul>
             </p>
-            <ul>
-                <li><strong>First Year:</strong> Approximately 15 human years.</li>
-                <li><strong>Second Year:</strong> Adds about 9 human years.</li>
-                <li><strong>Subsequent Years:</strong> Add about 5 human years for small breeds, and up to 7 for large breeds.</li>
-            </ul>
+
+            <h3>Metabolism & Size</h3>
             <p>
-                Our <strong>Animal Age Converter</strong> uses an optimized algorithm to give you a realistic "biological age" for your pet, 
-                helping you understand their life stage—from puppy energy to senior care needs.
+                Generally, smaller animals burn energy faster (higher metabolic rate), which produces more free radicals that damage cells—leading to faster aging. 
+                However, <strong>dogs break this rule</strong>. Small dogs live significantly longer than large dogs, a biological puzzle that scientists are still studying.
             </p>
-            <h3>Why Do Small Dogs Live Longer?</h3>
+
+            <h3>How We Calculate</h3>
             <p>
-                It is a biological anomaly that large mammals (like elephants) usually live longer, but fast-growing large dogs (like Great Danes) 
-                age rapidly. This calculator adjusts for these "metabolic rates" to give you the most accurate comparison possible.
+                Our calculator uses the latest veterinary guidelines:
+                <ul className="list-disc pl-5 space-y-2">
+                    <li><strong>Early Development:</strong> The first year of a pet's life equals about 15 human years (rapid maturity).</li>
+                    <li><strong>Adulthood:</strong> The aging curve flattens.</li>
+                    <li><strong>Senior Years:</strong> Aging accelerates again differently for each breed size.</li>
+                </ul>
             </p>
-        </section>
+         </section>
       </div>
     </>
   );
