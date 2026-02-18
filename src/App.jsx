@@ -11,6 +11,7 @@ import BlogPost from './pages/BlogPost';
 import Privacy from './pages/Privacy';
 
 function App() {
+  console.log("Bioclock v2.1 deployed"); // Force cache bust
   return (
     <HelmetProvider>
       <Router>
