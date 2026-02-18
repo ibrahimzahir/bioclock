@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { addDays, addSeconds, format, differenceInDays } from 'date-fns';
+import { worldEvents } from '../lib/world-events';
 import AdBanner from '../components/AdSense/AdBanner';
 
 const Milestones = () => {
@@ -42,23 +43,47 @@ const Milestones = () => {
             </div>
 
             <div className="space-y-8 relative before:absolute before:left-4 before:top-2 before:bottom-2 before:w-0.5 before:bg-indigo-100">
+                
+                {/* Birth Year Card */}
+                <div className="relative pl-12">
+                    <div className="absolute left-0 top-1 w-8 h-8 rounded-full flex items-center justify-center border-4 border-white shadow-sm bg-indigo-600 text-white">
+                        👶
+                    </div>
+                    <div className="bg-indigo-50 p-4 rounded-xl border border-indigo-100">
+                        <div className="text-xs font-bold uppercase tracking-wider text-indigo-400 mb-1">
+                            THE START LINE
+                        </div>
+                        <div className="text-xl font-bold text-slate-900">Born in {new Date(dob).getFullYear()}</div>
+                        <div className="text-slate-600 font-medium mt-1 text-sm">
+                            {worldEvents[new Date(dob).getFullYear()] || "The world welcomed you."}
+                        </div>
+                    </div>
+                </div>
+
                 {milestones.map((m, i) => {
                     const date = calculateMilestone(m.amount, m.unit);
+                    const year = date.getFullYear();
                     const isPast = new Date() > date;
+                    const event = worldEvents[year];
                     
                     return (
                         <div key={i} className="relative pl-12">
                             <div className={`absolute left-0 top-1 w-8 h-8 rounded-full flex items-center justify-center border-4 border-white shadow-sm ${isPast ? 'bg-indigo-500 text-white' : 'bg-gray-200 text-gray-500'}`}>
                                 {i + 1}
                             </div>
-                            <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                            <div className={`p-4 rounded-xl border ${isPast ? 'bg-white border-slate-200 shadow-sm' : 'bg-gray-50 border-gray-100 opacity-75'}`}>
                                 <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">
                                     {isPast ? 'ACHIEVED' : 'UPCOMING'}
                                 </div>
                                 <div className="text-xl font-bold text-slate-900">{m.label}</div>
-                                <div className="text-indigo-600 font-medium mt-1">
+                                <div className="text-indigo-600 font-bold mt-1 mb-2">
                                     {format(date, 'MMMM d, yyyy')}
                                 </div>
+                                {event && (
+                                    <div className="text-sm text-slate-500 border-t border-slate-100 pt-2 mt-2">
+                                        <span className="font-semibold text-slate-700">World Context:</span> {event}
+                                    </div>
+                                )}
                             </div>
                         </div>
                     );

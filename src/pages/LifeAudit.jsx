@@ -124,7 +124,7 @@ const LifeAudit = () => {
             <h2>The Science of Time Budgets: 4,000 Weeks</h2>
             <p>
                 The average human lifespan is roughly **4,000 weeks**. It sounds like a lot, but when you subtract the biological necessities, the number shrinks terrifyingly fast.
-                This concept, popularized by philosophers and productivity experts, is the core of our **Life Audit Tool**.
+                This concept, popularized by <strong>Oliver Burkeman</strong> in his best-selling book <em>Four Thousand Weeks</em>, is the core of our **Life Audit Tool**.
             </p>
             <h3>Where Does the Time Go?</h3>
             <ul>
