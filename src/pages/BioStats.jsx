@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { Heart, Activity, Droplets, Scissors } from 'lucide-react';
 import AdBanner from '../components/AdSense/AdBanner';
+import ScienceFacts from '../components/ViralFeatures/ScienceFacts';
 
 const BioStats = () => {
     const [age, setAge] = useState(25);
@@ -85,38 +86,7 @@ const BioStats = () => {
 
 
                  {/* Educational Content for AdSense Value */}
-                 <div className="prose prose-slate max-w-none bg-white p-8 rounded-2xl shadow-sm border border-gray-100 mb-8">
-                    <h2>The Science Behind Your Weird Stats 🧬</h2>
-                    <p>
-                        Your body is a biological machine that never stops working, even when you sleep. 
-                        Here is how we calculated these massive numbers based on average human physiology:
-                    </p>
-                    
-                    <h3>❤️ Heartbeats</h3>
-                    <p>
-                        The average human heart beats about <strong>60 to 100 times per minute</strong> at rest. 
-                        Over a year, that adds up to roughly 35 million beats. By the time you are 30, your heart has beaten over <strong>1 billion times</strong> without a battery change.
-                    </p>
-
-                    <h3>🌬️ Breaths Taken</h3>
-                    <p>
-                        A typical adult takes 12-20 breaths per minute. That is about 23,000 breaths a day. 
-                        In a lifetime, you will process enough air to fill thousands of hot air balloons.
-                    </p>
-
-                    <h3>🐍 Skin Shedding</h3>
-                    <p>
-                        You lose about 30,000 to 40,000 dead skin cells every minute! 
-                        That means you shed your entire outer layer of skin every 2-4 weeks. 
-                        Over a lifetime, this piles up to nearly 35kg (77 lbs) of dust—most of which ends up under your bed.
-                    </p>
-
-                    <h3>💧 Saliva Production</h3>
-                    <p>
-                        You produce enough spit to fill two small swimming pools in a lifetime. 
-                        Saliva is crucial for digestion and protecting your teeth from decay. Without it, you couldn't taste your food!
-                    </p>
-                 </div>
+                <ScienceFacts />
                  
                  <AdBanner slotId="8888888888" />
             </div>
