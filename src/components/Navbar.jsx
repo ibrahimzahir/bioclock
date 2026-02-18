@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Clock, Activity, Dog, Briefcase } from 'lucide-react';
+import { Clock, Activity, Dog, Briefcase, BookOpen } from 'lucide-react';
 
 const Navbar = () => {
     const location = useLocation();
@@ -9,7 +9,8 @@ const Navbar = () => {
         { path: '/milestones', label: 'Milestones', icon: Activity },
         { path: '/animal-age', label: 'Animal Age', icon: Dog },
         { path: '/audit', label: 'Life Audit', icon: Briefcase },
-        { path: '/biostats', label: 'Bio Stats', icon: Activity }, // Re-using Activity for Bio, but could import DNA if available, using Activity for now
+        { path: '/biostats', label: 'Bio Stats', icon: Activity },
+        { path: '/blog', label: 'Blog', icon: BookOpen },
     ];
 
     return (

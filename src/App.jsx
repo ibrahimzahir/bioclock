@@ -6,6 +6,8 @@ import Milestones from './pages/Milestones';
 import AnimalAge from './pages/AnimalAge';
 import LifeAudit from './pages/LifeAudit';
 import BioStats from './pages/BioStats';
+import BlogIndex from './pages/BlogIndex';
+import BlogPost from './pages/BlogPost';
 import Privacy from './pages/Privacy';
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
                 <Route path="/audit" element={<LifeAudit />} />
                 <Route path="/bio" element={<BioStats />} />
                 <Route path="/biostats" element={<BioStats />} />
+                <Route path="/blog" element={<BlogIndex />} />
+                <Route path="/blog/:id" element={<BlogPost />} />
                 <Route path="/privacy" element={<Privacy />} />
              </Routes>
           </main>

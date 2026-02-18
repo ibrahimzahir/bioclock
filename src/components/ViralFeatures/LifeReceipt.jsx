@@ -112,9 +112,15 @@ const LifeReceipt = ({ stats, dob, onClose }) => {
                 <div className="text-center mt-8 space-y-2">
                     <div className="text-xs font-bold uppercase">* Non-Refundable *</div>
                     <div className="text-[10px] text-gray-500">Thank you for existing!</div>
-                    {/* Barcode Mock */}
-                    <div className="h-12 bg-gray-900 w-3/4 mx-auto mt-4 opacity-80"></div>
-                    <div className="text-[10px] tracking-[0.5em] text-gray-400">123456789</div>
+                    
+                    {/* Viral Branding */}
+                    <div className="mt-4 pt-4 border-t border-dashed border-gray-300">
+                        <div className="text-lg font-black tracking-tighter">BIOCLOCK.APP</div>
+                        <div className="text-[10px] text-gray-400 mb-2">Calculate Your Death Date</div>
+                        {/* Barcode Mock */}
+                         <div className="h-8 bg-gray-900 w-3/4 mx-auto opacity-80 mb-1"></div>
+                         <div className="text-[9px] tracking-[0.5em] text-gray-400">123456789</div>
+                    </div>
                 </div>
                  
                  {/* Jagged Bottom */}
