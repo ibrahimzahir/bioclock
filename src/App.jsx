@@ -21,6 +21,7 @@ function App() {
                 <Route path="/animal-age" element={<AnimalAge />} />
                 <Route path="/audit" element={<LifeAudit />} />
                 <Route path="/bio" element={<BioStats />} />
+                <Route path="/biostats" element={<BioStats />} />
                 <Route path="/privacy" element={<Privacy />} />
              </Routes>
           </main>

@@ -9,7 +9,7 @@ const Navbar = () => {
         { path: '/milestones', label: 'Milestones', icon: Activity },
         { path: '/animal-age', label: 'Animal Age', icon: Dog },
         { path: '/audit', label: 'Life Audit', icon: Briefcase },
-        { path: '/bio', label: 'Bio Stats', icon: Activity }, // Re-using Activity for Bio, but could import DNA if available, using Activity for now
+        { path: '/biostats', label: 'Bio Stats', icon: Activity }, // Re-using Activity for Bio, but could import DNA if available, using Activity for now
     ];
 
     return (
