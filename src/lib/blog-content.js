@@ -34,7 +34,7 @@ export const blogPosts = [
         excerpt: "Circadian rhythms dictate your sleep, energy, and even when you're most likely to have a heart attack. Here is how to hack them.",
         date: "2025-10-21",
         readTime: "5 min read",
-        image: "https://images.unsplash.com/photo-1508962914670-32997ecccc05?auto=format&fit=crop&q=80&w=800",
+        image: "https://images.unsplash.com/photo-1508962914670-32997ecccc05?auto=format&fit=crop&q=80&w=800", 
         content: `
             <p>We often use the term "biological clock" to refer to fertility, but in chronobiology, it refers to the <strong>Suprachiasmatic Nucleus (SCN)</strong>. This tiny bundle of 20,000 neurons in your hypothalamus controls your circadian rhythm, a roughly 24-hour cycle that governs every cell in your body.</p>
 
@@ -76,6 +76,100 @@ export const blogPosts = [
 
             <h3>How to Use This Data</h3>
             <p>Don't let this depress you. Let it liberate you. If you only have 2,000 weeks left, do you really want to spend this one worrying about what a stranger thought of your Instagram post? The math of mortality is the greatest filter for what actually matters.</p>
+        `
+    },
+    {
+        id: "blue-zones-longevity",
+        title: "The Blue Zones: How to Live to 100",
+        excerpt: "What do Okinawa, Sardinia, and Loma Linda have in common? They are home to the world's longest-lived people.",
+        date: "2025-11-05",
+        readTime: "6 min read",
+        image: "https://images.unsplash.com/photo-1523498877561-39656157fdf6?auto=format&fit=crop&q=80&w=800",
+        content: `
+            <p>In certain regions of the world, called "Blue Zones," people regularly live to be over 100 years old. Researchers have identified habitual similarities between these disconnected cultures.</p>
+            <h2>1. Move Naturally</h2>
+            <p>They don't run marathons or pump iron. They live in environments that nudge them into moving without thinking about it. They garden, they walk to the store, they do their own house work.</p>
+            <h2>2. Purpose</h2>
+            <p>The Okinawans call it "Ikigai" and the Nicoyans call it "plan de vida." It translates to "why I wake up in the morning." Knowing your sense of purpose is worth up to seven years of extra life expectancy.</p>
+            <h2>3. Down Shift</h2>
+            <p>Stress leads to chronic inflammation. Blue Zones people have routines to shed that stress. Okinawans take a few moments each day to remember their ancestors, Adventists pray, Ikarians take a nap, and Sardinians do happy hour.</p>
+        `
+    },
+    {
+        id: "telomeres-aging",
+        title: "Telomeres: The Aglets of Your DNA",
+        excerpt: "Inside your cells, tiny caps called telomeres protect your DNA. As they shorten, you age. Can we stop them from shrinking?",
+        date: "2025-11-08",
+        readTime: "5 min read",
+        image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=800",
+        content: `
+            <p>Think of your DNA strands like shoelaces. The plastic tips at the end that keep them from fraying are called <strong>telomeres</strong>. Every time your cells divide, these telomeres get a little shorter.</p>
+            <h2>The Hayflick Limit</h2>
+            <p>Eventually, telomeres get too short to do their job, and the cell stops dividing. This is cellular senescence, or "zombie cells." They float around causing inflammation and aging.</p>
+            <h2>Can You Lengthen Them?</h2>
+            <p>Research suggests that while we can't stop the process, stress management, exercise, and diet can slow the rate of shortening. Chronic stress, in particular, has been linked to accelerated telomere shortening.</p>
+        `
+    },
+    {
+        id: "science-of-naps",
+        title: "The Perfect Nap: A User's Guide",
+        excerpt: "Napping isn't lazy; it's a cognitive performance tool. NASA research reveals the ideal duration for restoring brain function.",
+        date: "2025-11-12",
+        readTime: "4 min read",
+        image: "https://images.unsplash.com/photo-1541781777631-fa182f807e30?auto=format&fit=crop&q=80&w=800",
+        content: `
+            <p>NASA pilots who took a 26-minute nap improved performance by 34% and alertness by 54%. But nap too long, and you hit "sleep inertia."</p>
+            <h2>The 20-Minute Power Nap</h2>
+            <p>This keeps you in light sleep (Stage 2). It boosts alertness and motor learning skills like typing or playing piano. You wake up fresh.</p>
+            <h2>The 60-Minute Groggle</h2>
+            <p>This pushes you into deep slow-wave sleep. It's great for remembering facts and faces, but you will wake up feeling groggy.</p>
+            <h2>The 90-Minute Full Cycle</h2>
+            <p>This allows for a full cycle of sleep, including REM (dreaming). It boosts creativity and emotional memory.</p>
+        `
+    },
+    {
+        id: "memory-reminiscence-bump",
+        title: "Why You Love the Music from Your Teens",
+        excerpt: "Psychologists call it the 'Reminiscence Bump.' We form our strongest memories between ages 15 and 25.",
+        date: "2025-11-15",
+        readTime: "3 min read",
+        image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=800",
+        content: `
+            <p>Ask a 70-year-old to recall their life memories, and a disproportionate number will come from the decade between ages 15 and 25. This is the <strong>Reminiscence Bump</strong>.</p>
+            <h2>Identity Formation</h2>
+            <p>During these years, we are forming our self-identity. We experience many "firsts"—first love, first car, first job. Because these events are foundational to "who we are," the brain encodes them with extra weight.</p>
+            <h2>The Soundtrack of Your Life</h2>
+            <p>This explains why the music you listened to in high school remains your favorite forever. It wasn't just background noise; it was the soundtrack to your identity being forged.</p>
+        `
+    },
+    {
+        id: "tachypsychia-slow-motion",
+        title: "Why Time Slows Down in a Car Crash",
+        excerpt: "In life-or-death situations, victims often report the world moving in slow motion. This is called Tachypsychia.",
+        date: "2025-11-19",
+        readTime: "4 min read",
+        image: "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?auto=format&fit=crop&q=80&w=800",
+        content: `
+            <p>You're slipping on ice. In that split second, you notice individual snowflakes, the sound of your breath, the tilt of the horizon. It feels like minutes pass before you hit the ground.</p>
+            <h2>The Amygdala Hijack</h2>
+            <p>When in danger, the amygdala (fear center) takes over. It commands the brain to record *everything*. The brain lays down memories with much higher density than normal.</p>
+            <h2>The Memory Trick</h2>
+            <p>Interestingly, time doesn't actually slow down. Reaction time tests show we don't process information faster during fear. Instead, the *memory* of the event is so dense that when we play it back, our brain interprets it as having taken a long time. It's a retrospective illusion.</p>
+        `
+    },
+    {
+        id: "sleep-cycles-explained",
+        title: "Sleep Architecture: What Happens When You Close Your Eyes",
+        excerpt: "Sleep isn't just 'off' time. It's a complex cycle of cleaning, archiving, and repairing that keeps you alive.",
+        date: "2025-11-20",
+        readTime: "5 min read",
+        image: "https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&q=80&w=800",
+        content: `
+            <p>We spend one-third of our lives asleep. Why? Science used to think it was just to save energy, but the brain is highly active during sleep.</p>
+            <h2>The Glymphatic System</h2>
+            <p>While you sleep, your brain cells literally shrink by 60%, allowing cerebrospinal fluid to wash through the tissue. This "brain wash" clears out toxins like beta-amyloid, which leads to Alzheimer's.</p>
+            <h2>REM vs. Deep Sleep</h2>
+            <p>Deep sleep helps physical recovery and immune system boosts. REM sleep (dreaming) is for emotional processing and memory consolidation. You need both to be a functional human.</p>
         `
     }
 ];
