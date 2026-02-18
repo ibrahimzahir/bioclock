@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { differenceInYears } from 'date-fns';
 import { Dog, Cat, Fish, Rabbit } from 'lucide-react'; // Hypothetical icons, will map available ones
 import AdBanner from '../components/AdSense/AdBanner';
+import AnimalScience from '../components/ViralFeatures/AnimalScience';
 
 const AnimalAge = () => {
   const [age, setAge] = useState(25);
@@ -51,40 +52,8 @@ const AnimalAge = () => {
          </div>
 
          <AdBanner slotId="1122334455" />
-
-         <section className="prose prose-slate max-w-none bg-white p-8 rounded-2xl shadow-sm border border-gray-100 mt-8">
-            <h2>The Science of Aging: Why Do Animals Clock Time Differently? 🕰️</h2>
-            <p>
-                The old "7 year rule" is a myth. Aging is not linear across species. 
-                Biological time is often measured by metabolic rate and heartbeats.
-            </p>
-
-            <h3>The Heartbeat Hypothesis</h3>
-            <p>
-                There is a fascinating biological theory that most mammals get roughly <strong>1 billion heartbeats</strong> in a lifetime.
-                <ul>
-                    <li><strong>Hamsters:</strong> Their hearts beat 450 times per minute. They live only 2-3 years.</li>
-                    <li><strong>Whales:</strong> Their hearts beat only 20 times per minute. They can live over 100 years.</li>
-                    <li><strong>Humans:</strong> We are outliers! We get about 2.5 billion beats thanks to modern medicine and evolution.</li>
-                </ul>
-            </p>
-
-            <h3>Metabolism & Size</h3>
-            <p>
-                Generally, smaller animals burn energy faster (higher metabolic rate), which produces more free radicals that damage cells—leading to faster aging. 
-                However, <strong>dogs break this rule</strong>. Small dogs live significantly longer than large dogs, a biological puzzle that scientists are still studying.
-            </p>
-
-            <h3>How We Calculate</h3>
-            <p>
-                Our calculator uses the latest veterinary guidelines:
-                <ul className="list-disc pl-5 space-y-2">
-                    <li><strong>Early Development:</strong> The first year of a pet's life equals about 15 human years (rapid maturity).</li>
-                    <li><strong>Adulthood:</strong> The aging curve flattens.</li>
-                    <li><strong>Senior Years:</strong> Aging accelerates again differently for each breed size.</li>
-                </ul>
-            </p>
-         </section>
+         
+         <AnimalScience />
       </div>
     </>
   );
