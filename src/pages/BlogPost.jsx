@@ -15,6 +15,34 @@ const BlogPost = () => {
             <Helmet>
                 <title>{post.title} - BioClock Blog</title>
                 <meta name="description" content={post.excerpt} />
+                
+                {/* Open Graph / Social */}
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content={post.title} />
+                <meta property="og:description" content={post.excerpt} />
+                <meta property="og:image" content={`https://bioclock.app${post.image}`} />
+                <meta property="og:url" content={`https://bioclock.app/blog/${post.id}`} />
+
+                {/* Structured Data for SEO */}
+                <script type="application/ld+json">
+                    {`
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "BlogPosting",
+                            "headline": "${post.title}",
+                            "image": [
+                                "https://bioclock.app${post.image}"
+                            ],
+                            "datePublished": "${post.date}T08:00:00+08:00",
+                            "dateModified": "${post.date}T09:20:00+08:00",
+                            "author": [{
+                                "@type": "Person",
+                                "name": "BioClock Science Team",
+                                "url": "https://bioclock.app/bio"
+                            }]
+                        }
+                    `}
+                </script>
             </Helmet>
 
             <div className="max-w-3xl mx-auto">

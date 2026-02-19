@@ -10,6 +10,13 @@ const BlogIndex = () => {
             <Helmet>
                 <title>The Time Blog - Science of Aging & Chronobiology</title>
                 <meta name="description" content="Explore the science of time, aging, and biology. Read articles on why time flies, circadian rhythms, and how to optimize your 4,000 weeks." />
+                
+                {/* Open Graph / Social */}
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="The Time Blog - Science of Aging" />
+                <meta property="og:description" content="Explore the science of time, aging, and biology. Read high-quality articles on chronobiology." />
+                <meta property="og:image" content="https://bioclock.app/images/blog/time-flies.png" />
+                <meta property="og:url" content="https://bioclock.app/blog" />
             </Helmet>
 
             <div className="max-w-4xl mx-auto">
